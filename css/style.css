@@ -5,19 +5,20 @@
 }
 
 .game-board{
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative;
     overflow: hidden ;
+    background: linear-gradient(#87ceeb , #E0f6ff);
 }
 
 .pipe{
     bottom: 0;
     position: absolute;
     width: 80px;
-    animation: pipe_animation 2s infinite linear;
+    animation: pipe_animation 1.3s infinite linear;
 }
 
 @keyframes pipe_animation {
@@ -62,6 +63,17 @@
     85%{
         bottom: 160px;
     }
+
+
+    90%{
+        bottom: 140px;
+    }
+
+    95%{
+        bottom: 90px;
+    }
+
+    
   
 
     100%{
@@ -73,3 +85,89 @@
     
 }
 
+
+.logo{
+    justify-content: center;
+    align-items: center;
+    display: flex ;
+    margin-top: 10% ;
+    
+}
+
+.clouds{
+    width: 500px;
+    position: absolute;
+    animation: clouds_anim 8s infinite linear;
+    margin-top: 10px;
+}
+
+
+@keyframes clouds_anim {
+
+    from {
+        right: -550px;
+    }
+    
+    to {
+        right: 100%;
+    }
+    
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  
+  
+  .modal-content {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .modal-content img {
+    width: 20%;
+  }
+  
+ 
+  #restartButton {
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+
+  }
+
+  #restartButton:hover{
+    background-color: black;
+    color: white;
+
+  }
+  
+  .divider{
+    color: black;
+    margin: 10px;
+
+  }
+
+  .score {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    font-size: 24px; /* Tamanho da fonte */
+    color: red; /* Cor da fonte */
+  }
+  
